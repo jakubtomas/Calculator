@@ -41,7 +41,10 @@ public class EmptyInputTest {
     driver.get("http://itsovy.sk/testing/");
     driver.manage().window().setSize(new Dimension(848, 834));
     driver.findElement(By.id("btnsubmit")).click();
-    assertThat(driver.findElement(By.id("error")).getText(), is("sadfasdf"));
+    assertThat(driver.findElement(By.id("error")).getText(), is(
+            "Amount must be a number between 0 and 1000000 !\n" +
+            "Interest must be a number between 0 and 100 !\n" +
+            "You must agree to the processing !"));
     driver.findElement(By.id("btnreset")).click();
   }
 }

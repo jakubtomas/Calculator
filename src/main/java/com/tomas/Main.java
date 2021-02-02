@@ -41,7 +41,7 @@ public class Main {
         //subor prikazov
         /*
         * Poziadavky zakaznika:
-- amount, cislo v intervale <0;1000000>
+- amount, cislo v intervale <0;1000 000>
 - interest, cislo v intervale <0;100>
 - period , pocet rokov: 1,2,3,4,5
 uzivatel musim vyplnit vsetky vstupne polia, zaroven musi zaskrtnut suhlas so spracovanim udajov
