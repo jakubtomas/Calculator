@@ -9,39 +9,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://itsovy.sk/testing/");
+        Amount100Test amount100Test = new Amount100Test();
+        amount100Test.amount100();
 
 
-        WebElement amount = driver.findElement(By.xpath("//*[@id=\"amount\"]"));
-        WebElement interest = driver.findElement(By.xpath("//*[@id=\"interest\"]"));
-
-        WebElement period = driver.findElement(By.xpath("//*[@id=\"period\"]"));
-        WebElement valuePeriod = driver.findElement(By.xpath("//*[@id=\"lblPeriod\"]"));
-
-        WebElement taxYes = driver.findElement(By.cssSelector("input[value=\"y\"]"));
-        WebElement taxNo = driver.findElement(By.cssSelector("input[value=\"n\"]"));
-        WebElement agreementConfirm = driver.findElement(By.id("confirm"));
-
-        WebElement resetBtn = driver.findElement(By.id("btnreset"));
-        WebElement calculateBtn = driver.findElement(By.id("btnsubmit"));
-        WebElement result = driver.findElement(By.id("result"));
-
-
-
-        String amountErrorMsg = "Amount must be a number between 0 and 1000000 !";
-        String interestErrorMsg = "Interest must be a number between 0 and 100 !";
-        String agreementErrorMsg = "You must agree to the processing !";
 
 
         //Testcase postup krokov ktory ma vysledok
         //subor prikazov
         /*
         * Poziadavky zakaznika:
-- amount, cislo v intervale <0;1000 000>
+- amount, cislo v intervale <0;1000000>
 - interest, cislo v intervale <0;100>
 - period , pocet rokov: 1,2,3,4,5
 uzivatel musim vyplnit vsetky vstupne polia, zaroven musi zaskrtnut suhlas so spracovanim udajov
